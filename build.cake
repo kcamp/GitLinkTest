@@ -1,4 +1,5 @@
 #tool "nuget:?package=NUnit.ConsoleRunner"
+#tool "nuget:?package=gitlink"
 
 // params
 var target = Argument("Target", "Default");
@@ -27,6 +28,8 @@ Task("Build")
                 .UseToolVersion(MSBuildToolVersion.VS2015)
                 .SetMSBuildPlatform(MSBuildPlatform.x86)
         );
+
+        GitLink("./");
     });
     
 Task("Clean-Build")
