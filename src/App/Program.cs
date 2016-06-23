@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace App
 {
@@ -10,6 +6,11 @@ namespace App
     {
         static void Main(string[] args)
         {
+            Debugger.Launch();
+            new Doohickey(
+                new DoohickeyConfigurator().Named("TestPdb").WithCount(5).WithSize(10).Build(),
+                new ConsoleWriter()
+                ).Go();
         }
     }
 }
