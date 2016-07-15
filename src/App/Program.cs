@@ -8,7 +8,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            //Debugger.Launch();
+            Debugger.Launch();
             new Doohickey(
                 new DoohickeyConfigurator().Named("TestPdb").WithCount(5).WithSize(10).Build(),
                 new ConsoleWriter()
